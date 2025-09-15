@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Pengaa — Smart WhatsApp Agents</title>
+        <link rel="manifest" href="/manifest.json"/>
+        <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react@18",
+          "react-dom": "https://esm.sh/react-dom@18",
+          "react-dom/client": "https://esm.sh/react-dom@18/client",
+          "react/jsx-runtime": "https://esm.sh/react@18/jsx-runtime",
+          "react/jsx-dev-runtime": "https://esm.sh/react@18/jsx-dev-runtime",
+          "@xyflow/react": "https://esm.sh/@xyflow/react@12.8.4?external=react,react-dom"
+        }
+      }
+    </script>
+        <!-- Base styles -->
+        <link rel="stylesheet" href="/assets/styles.css"/>
+        <link rel="stylesheet" href="/assets/animations.css"/>
+        <link rel="stylesheet" href="/assets/flow.css"/>
+        <link rel="stylesheet" href="/assets/react-hero-flow.css"/>
+        <link rel="stylesheet" href="/assets/react-playbooks-flow.css"/>
+        <!-- React Flow base CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@xyflow/react@12.8.4/dist/style.css"/>
+        <link rel="stylesheet" href="/assets/carousel.css"/>
+        <meta name="description" content="Smart WhatsApp agents for lead gen, follow‑ups and instant automations."/>
+        <script>document.documentElement.classList.add('page-fade')</script>
+        <script defer src="/assets/animations.js"></script>
+        <script defer src="/assets/carousel.js"></script>
+        <style>.container { max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; } .section { padding: 5rem 0; } .btn { height: 42px; border-radius: 20px; padding: 0 1rem; font-weight: 600; }</style>
+    </head>
+    <body class="bg-gray-900_01 text-white-a700">
+        <header class="bg-gray-900_01 sticky top-0 z-50 border-b border-gray-800">
+            <div class="container flex items-center justify-between py-4 gap-4">
+                <img class="h-10 w-auto" src="/images/img_header_logo.svg" alt="Pengaa"/>
+                <nav class="hidden md:flex items-center gap-6" aria-label="Primary"><a href="#" class="hover:text-teal-a400">Blog</a><a href="#" class="hover:text-teal-a400">Dedicated Support</a>
+                    <select aria-label="Language" class="px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-sm hover:bg-gray-600">
+                        <option value="en">🇺🇸 English</option>
+                    </select>
+                </nav>
+                <button id="menu-toggle" aria-controls="mobile-nav" aria-expanded="false" class="md:hidden">
+                    <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M3 6h18M3 12h18M3 18h18"/>
+                    </svg>
+                </button><a href="https://app.evoapicloud.com/register" target="_blank" rel="noopener noreferrer" class="btn bg-teal-a400 text-gray-900_01 hidden md:inline-flex items-center">Get Started</a>
+            </div>
+            <nav id="mobile-nav" class="hidden md:hidden border-t border-gray-800" aria-label="Mobile">
+                <div class="container py-3 flex flex-col gap-3"><a href="#" class="hover:text-teal-a400">Blog</a><a href="#" class="hover:text-teal-a400">Dedicated Support</a>
+                    <select aria-label="Language" class="px-3 py-2 bg-gray-700 border border-gray-600 rounded-md text-sm hover:bg-gray-600">
+                        <option value="en">🇺🇸 English</option>
+                    </select><a href="https://app.evoapicloud.com/register" target="_blank" rel="noopener noreferrer" class="btn bg-teal-a400 text-gray-900_01 inline-flex items-center">Get Started</a>
+                </div>
+            </nav>
+        </header>
+        <!-- Hero -->
+        <section class="section relative overflow-hidden">
+            <img data-parallax="0.35" class="absolute left-[5%] top-[2%] opacity-30 md:opacity-10" src="/images/img_bg.svg" alt="Decorative graphic (left)"/>
+            <img data-parallax="0.2" class="absolute right-[5%] bottom-0 opacity-30 md:opacity-10" src="/images/img_bg_gray_900.svg" alt="Decorative graphic (right)"/>
+            <div class="container relative z-10 flex flex-col items-center gap-6 text-center">
+                <h1 class="font-interpt text-5xl font-montserrat font-bold text-center leading-tight md:text-4xl sm:text-3xl text-[48px] font-semibold md:text-[44px] sm:text-[38px] text-teal-a400"><span class="text-white-a700">A true evolution in how you </span><span class="text-teal-a400">connect with your customers</span></h1> 
+                <p class="max-w-2xl text-[18px]">Ready‑to‑use agents for lead gen, follow‑ups and instant actions — no code, just results.</p>
+                <div class="flex gap-3 sm:flex-col w-full sm:max-w-md justify-center"><a href="https://app.evoapicloud.com/register" target="_blank" rel="noopener noreferrer" class="btn bg-teal-a400 text-gray-900_01 inline-flex items-center justify-center">Get WhatsApp Demo</a><a href="#use-cases" class="btn border border-gray-700 bg-gray-900 inline-flex items-center justify-center">See Use Cases</a>
+                </div>
+            </div>
+        </section>
+        <!-- Landing Flow Preview -->
+        <section class="section">
+            <div class="container">
+                <div class="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-700/50 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                    <div id="rf-canvas-landing" style="height: clamp(360px, 70vh, 640px)"></div>
+                </div>
+                <script type="module" src="/assets/landing-react-flow.js"></script>
+            </div>
+        </section>
+        <!-- Playbooks -->
+        <section class="section">
+            <div class="container grid md:grid-cols-2 gap-10 items-start">
+                <div class="flex flex-col gap-4">
+                    <h2 id="use-cases" class="font-montserrat text-3xl font-bold">Use Cases <span class="block text-teal-a400">E‑commerce • SaaS • Education</span></h2>
+                    <p>Sync contacts and deals with your CRM to keep pipelines up to date.</p>
+                    <p>Queueing and retries ensure message delivery — even during peak loads.</p>
+                    <p>Built‑in opt‑in/out and template workflows to stay compliant.</p>
+                </div>
+                <div id="rf-embed-playbooks" class="w-full">
+                    <div class="relative w-full rounded-2xl overflow-hidden border border-slate-700/50 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                        <div class="p-3 border-b border-slate-700/50 bg-slate-900/85 text-center">
+                            <p class="text-slate-300 text-base font-semibold">Automation Playbooks — Fully Interactive</p>
+                        </div>
+                        <div id="rf-canvas-playbooks" style="height: clamp(300px, 50vh, 480px)"></div>
+                    </div>
+                    <script type="module" src="/assets/react-playbooks-flow.js"></script>
+                </div>
+            </div>
+        </section>
+        <!-- Appointments & Confirmations -->
+        <section class="section">
+            <div class="container grid md:grid-cols-2 gap-10 items-start">
+                <div class="flex flex-col gap-4">
+                    <h2 class="font-montserrat text-3xl font-bold">Scheduling & Confirmations <span class="block text-teal-a400">Google Calendar • Gmail</span></h2>
+                    <p>Capture availability from users via chat or forms and convert it into confirmed appointments.</p>
+                    <p>Automatically create events in Google Calendar and avoid double‑booking.</p>
+                    <p>Send email confirmations and reminders using Gmail to keep everyone aligned.</p>
+                </div>
+                <div id="rf-embed-appointments" class="w-full">
+                    <div class="relative w-full rounded-2xl overflow-hidden border border-slate-700/50 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                        <div class="p-3 border-b border-slate-700/50 bg-slate-900/85 text-center">
+                            <p class="text-slate-300 text-base font-semibold">Scheduling Flow — Fully Interactive</p>
+                        </div>
+                        <div id="rf-canvas-appointments" style="height: clamp(300px, 50vh, 480px)"></div>
+                    </div>
+                    <script type="module" src="/assets/react-appointments-flow.js"></script>
+                </div>
+            </div>
+        </section>
+        <!-- Capabilities -->
+        <section class="relative py-20 md:py-16 sm:py-12">
+            <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4 sm:w-full sm:rotate-90">
+                <img class="w-full h-auto" src="images/img_bg_gray_700.svg" alt="Background decoration" loading="lazy">
+            </div>
+            <div class="relative z-10 container mx-auto max-w-5xl px-6">
+                <div class="flex flex-col items-center gap-8">
+                    <h2 class="font-interpt font-montserrat text-2xl font-bold text-white-a700 text-[24px] font-bold md:text-[22px] text-teal-a400">Integrations</h2>
+                    <div class="grid grid-cols-5 gap-4 w-full md:grid-cols-3 sm:grid-cols-2">
+                        <div class="flex flex-col items-center gap-3 p-5 border border-gray-700 bg-gray-900 rounded-3xl transition-all hover:border-gray-600 ">
+                            <img class="h-8 w-auto mt-2.5 object-contain" src="images/logos/websocket.svg" alt="Logo WebSocket" loading="lazy" style="filter: grayscale(100%) brightness(1.2) contrast(0.8);">
+                            <h6 class="font-interpt text-base font-semibold text-white-a700 text-[16px] font-semibold text-teal-a400">WebSocket</h6>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 p-5 border border-gray-700 bg-gray-900 rounded-3xl transition-all hover:border-gray-600 ">
+                            <img class="h-8 w-auto mt-2.5 object-contain" src="images/logos/rabbitmq.svg" alt="Logo RabbitMQ" loading="lazy" style="filter: grayscale(100%) brightness(1.2) contrast(0.8);">
+                            <h6 class="font-interpt text-base font-semibold text-white-a700 text-[16px] font-semibold text-teal-a400">RabbitMQ</h6>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 p-5 border border-gray-700 bg-gray-900 rounded-3xl transition-all hover:border-gray-600 ">
+                            <img class="h-8 w-auto mt-2.5 object-contain" src="images/logos/aws.svg" alt="Logo Amazon SQS" loading="lazy" style="filter: grayscale(100%) brightness(1.2) contrast(0.8);">
+                            <h6 class="font-interpt text-base font-semibold text-white-a700 text-[16px] font-semibold text-teal-a400">Amazon SQS</h6>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 p-5 border border-gray-700 bg-gray-900 rounded-3xl transition-all hover:border-gray-600 ">
+                            <img class="h-8 w-auto mt-2.5 object-contain" src="images/logos/chatwoot.svg" alt="Logo Chatwoot" loading="lazy" style="filter: grayscale(100%) brightness(1.2) contrast(0.8);">
+                            <h6 class="font-interpt text-base font-semibold text-white-a700 text-[16px] font-semibold text-teal-a400">Chatwoot</h6>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 p-5 border border-gray-700 bg-gray-900 rounded-3xl transition-all hover:border-gray-600 ">
+                            <img class="h-8 w-auto mt-2.5 object-contain" src="images/logos/evolution_bot.svg" alt="Logo Evolution Bot" loading="lazy" style="filter: grayscale(100%) brightness(1.2) contrast(0.8);">
+                            <h6 class="font-interpt text-base font-semibold text-white-a700 text-[16px] font-semibold text-teal-a400">Evolution Bot</h6>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 p-5 border border-gray-700 bg-gray-900 rounded-3xl transition-all hover:border-gray-600 ">
+                            <img class="h-8 w-auto mt-2.5 object-contain" src="images/logos/typebot.svg" alt="Logo Typebot" loading="lazy" style="filter: grayscale(100%) brightness(1.2) contrast(0.8);">
+                            <h6 class="font-interpt text-base font-semibold text-white-a700 text-[16px] font-semibold text-teal-a400">Typebot</h6>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 p-5 border border-gray-700 bg-gray-900 rounded-3xl transition-all hover:border-gray-600 ">
+                            <img class="h-8 w-auto mt-2.5 object-contain" src="images/logos/openai.svg" alt="Logo OpenAI" loading="lazy" style="filter: grayscale(100%) brightness(1.2) contrast(0.8);">
+                            <h6 class="font-interpt text-base font-semibold text-white-a700 text-[16px] font-semibold text-teal-a400">OpenAI</h6>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 p-5 border border-gray-700 bg-gray-900 rounded-3xl transition-all hover:border-gray-600 ">
+                            <img class="h-8 w-auto mt-2.5 object-contain" src="images/logos/dify.svg" alt="Logo Dify" loading="lazy" style="filter: grayscale(100%) brightness(1.2) contrast(0.8);">
+                            <h6 class="font-interpt text-base font-semibold text-white-a700 text-[16px] font-semibold text-teal-a400">Dify</h6>
+                        </div>
+                        <div class="flex flex-col items-center gap-3 p-5 border border-gray-700 bg-gray-900 rounded-3xl transition-all hover:border-gray-600 ">
+                            <img class="h-8 w-auto mt-2.5 object-contain" src="images/logos/flowise.svg" alt="Logo Flowise" loading="lazy" style="filter: grayscale(100%) brightness(1.2) contrast(0.8);">
+                            <h6 class="font-interpt text-base font-semibold text-white-a700 text-[16px] font-semibold text-teal-a400">Flowise</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="pricing-plans-section" class="my-[100px] flex flex-col items-center self-stretch">
+            <div class="container-xs flex flex-col items-center gap-6 md:px-5">
+                <h2 class="font-interpt font-montserrat text-[24px] font-bold text-white-a700 md:text-[22px] text-[24px] font-bold md:text-[22px] text-teal-a400">Plans</h2>
+                <div class="flex flex-col items-center gap-[22px] self-stretch">
+                    <p class="font-interpt font-interpt text-[18px] font-normal text-white-a700 text-[18px] font-normal"><span>Start for free, collaborate with your team, and reach&nbsp;</span><span class="font-bold">thousands of users.</span></p>
+                    <div class="flex flex-col gap-6 self-stretch mt-10">
+                        <div class="flex md:flex-col">
+                            <div class="flex-1 p-6 border border-gray-700 rounded-[24px] mx-2 relative 
+                        bg-gray-950
+                      ">
+                                <div class="flex flex-col gap-6">
+                                    <div class="text-center">
+                                        <h3 class="text-xl font-bold text-white-a700">Starter</h3>
+                                        <div class="mt-2">
+                                            <span class="text-2xl font-bold text-white-a700">$19</span>
+                                            <span class="text-sm text-white-a700">/monthly</span>
+                                        </div>
+                                        <a href="https://app.evoapicloud.com/register" target="_blank" rel="noopener noreferrer" class="block w-full"><button class="mt-4 w-full rounded-[12px] flex flex-row items-center justify-center text-center cursor-pointer whitespace-nowrap undefined h-[42px] px-3.5 text-[16px] bg-teal-a400 shadow-xs text-gray-900_01">Subscribe</button></a>
+                                        <button class="mt-4 flex items-center justify-center w-full text-gray-300 hover:text-white-a700 transition-colors">Hide resources
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="ml-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M256 217.9L383 345c9.4 9.4 24.6 9.4 33.9 0 9.4-9.4 9.3-24.6 0-34L273 167c-9.1-9.1-23.7-9.3-33.1-.7L95 310.9c-4.7 4.7-7 10.9-7 17s2.3 12.3 7 17c9.4 9.4 24.6 9.4 33.9 0l127.1-127z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="border-t border-gray-700 pt-4">
+                                        <h4 class="font-bold mb-4 text-white-a700">Features</h4>
+                                        <div class="space-y-3">
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Users</span>
+                                                <span class="text-gray-300">1</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Projects</span>
+                                                <span class="text-gray-300">1</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Clients</span>
+                                                <span class="text-gray-300">1</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Whatsapp Web</span>
+                                                <span class="text-gray-300">1</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Whatsapp Cloud API</span>
+                                                <span class="text-gray-300">2</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Facebook / Instagram</span>
+                                                <span class="text-gray-300">2</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Integrations</span>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="w-5 h-5 text-green-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Automation</span>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="w-5 h-5 text-green-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Marketplace</span>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="w-5 h-5 text-green-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-1 p-6 border border-gray-700 rounded-[24px] mx-2 relative 
+                        border-green-500 bg-gray-900 transform scale-105 shadow-xl
+                      ">
+                                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-1 rounded-full text-sm">Most Popular</div>
+                                <div class="flex flex-col gap-6">
+                                    <div class="text-center">
+                                        <h3 class="text-xl font-bold text-white-a700">Basic</h3>
+                                        <div class="mt-2">
+                                            <span class="text-2xl font-bold text-white-a700">$59</span>
+                                            <span class="text-sm text-white-a700">/monthly</span>
+                                        </div>
+                                        <a href="https://app.evoapicloud.com/register" target="_blank" rel="noopener noreferrer" class="block w-full"><button class="mt-4 w-full rounded-[12px] flex flex-row items-center justify-center text-center cursor-pointer whitespace-nowrap undefined h-[42px] px-3.5 text-[16px] bg-teal-a400 shadow-xs text-gray-900_01">Subscribe</button></a>
+                                        <button class="mt-4 flex items-center justify-center w-full text-gray-300 hover:text-white-a700 transition-colors">Hide resources
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="ml-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M256 217.9L383 345c9.4 9.4 24.6 9.4 33.9 0 9.4-9.4 9.3-24.6 0-34L273 167c-9.1-9.1-23.7-9.3-33.1-.7L95 310.9c-4.7 4.7-7 10.9-7 17s2.3 12.3 7 17c9.4 9.4 24.6 9.4 33.9 0l127.1-127z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="border-t border-gray-700 pt-4">
+                                        <h4 class="font-bold mb-4 text-white-a700">Features</h4>
+                                        <div class="space-y-3">
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Users</span>
+                                                <span class="text-gray-300">5</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Projects</span>
+                                                <span class="text-gray-300">5</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Clients</span>
+                                                <span class="text-gray-300">5</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Whatsapp Web</span>
+                                                <span class="text-gray-300">5</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Whatsapp Cloud API</span>
+                                                <span class="text-gray-300">10</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Facebook / Instagram</span>
+                                                <span class="text-gray-300">10</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Integrations</span>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="w-5 h-5 text-green-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Automation</span>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="w-5 h-5 text-green-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Marketplace</span>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="w-5 h-5 text-green-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex-1 p-6 border border-gray-700 rounded-[24px] mx-2 relative 
+                        bg-gray-950
+                      ">
+                                <div class="flex flex-col gap-6">
+                                    <div class="text-center">
+                                        <h3 class="text-xl font-bold text-white-a700">Professional</h3>
+                                        <div class="mt-2">
+                                            <span class="text-2xl font-bold text-white-a700">$329</span>
+                                            <span class="text-sm text-white-a700">/monthly</span>
+                                        </div>
+                                        <a href="https://app.evoapicloud.com/register" target="_blank" rel="noopener noreferrer" class="block w-full"><button class="mt-4 w-full rounded-[12px] flex flex-row items-center justify-center text-center cursor-pointer whitespace-nowrap undefined h-[42px] px-3.5 text-[16px] bg-teal-a400 shadow-xs text-gray-900_01">Subscribe</button></a>
+                                        <button class="mt-4 flex items-center justify-center w-full text-gray-300 hover:text-white-a700 transition-colors">Hide resources
+                                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="ml-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M256 217.9L383 345c9.4 9.4 24.6 9.4 33.9 0 9.4-9.4 9.3-24.6 0-34L273 167c-9.1-9.1-23.7-9.3-33.1-.7L95 310.9c-4.7 4.7-7 10.9-7 17s2.3 12.3 7 17c9.4 9.4 24.6 9.4 33.9 0l127.1-127z"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="border-t border-gray-700 pt-4">
+                                        <h4 class="font-bold mb-4 text-white-a700">Features</h4>
+                                        <div class="space-y-3">
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Users</span>
+                                                <span class="text-gray-300">10</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Projects</span>
+                                                <span class="text-gray-300">50</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Clients</span>
+                                                <span class="text-gray-300">50</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Whatsapp Web</span>
+                                                <span class="text-gray-300">50</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Whatsapp Cloud API</span>
+                                                <span class="text-gray-300">100</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Facebook / Instagram</span>
+                                                <span class="text-gray-300">100</span>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Integrations</span>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="w-5 h-5 text-green-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Automation</span>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="w-5 h-5 text-green-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-gray-300">Marketplace</span>
+                                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" class="w-5 h-5 text-green-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M912 190h-69.9c-9.8 0-19.1 4.5-25.1 12.2L404.7 724.5 207 474a32 32 0 0 0-25.1-12.2H112c-6.7 0-10.4 7.7-6.3 12.9l273.9 347c12.8 16.2 37.4 16.2 50.3 0l488.4-618.9c4.1-5.1.4-12.8-6.3-12.8z"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer class="section border-t border-gray-800">
+            <div class="container flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <img class="h-8 w-32 object-contain" src="/images/img_footer_logo.svg" alt="Pengaa"/>
+                <div class="flex gap-4 items-center"><a href="https://evolution-api.com/discord" target="_blank" rel="noopener noreferrer"><img class="h-6" src="/images/img_meteor_icons_discord.svg" alt="Discord"/></a><a href="https://evolution-api.com/instagram" target="_blank" rel="noopener noreferrer"><img class="h-6" src="/images/img_mdi_instagram.svg" alt="Instagram"/></a><a href="https://evolution-api.com/youtube" target="_blank" rel="noopener noreferrer"><img class="h-6" src="/images/img_ri_youtube_line.svg" alt="YouTube"/></a><a href="https://evolution-api.com/whatsapp" target="_blank" rel="noopener noreferrer"><img class="h-6" src="/images/img_ic_baseline_whatsapp.svg" alt="WhatsApp"/></a>
+                </div>
+                <div class="text-sm text-gray-400">©2025 Pengaa — All rights reserved</div>
+            </div>
+        </footer>
+        <script>
+        (function(){
+            function ready(fn){ if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',fn);} else { fn(); } }
+            ready(function(){
+                var btn = document.getElementById('menu-toggle');
+                var nav = document.getElementById('mobile-nav');
+                if(!btn || !nav) return;
+                btn.addEventListener('click', function(){
+                    var isHidden = nav.classList.toggle('hidden');
+                    btn.setAttribute('aria-expanded', String(!isHidden));
+                });
+            });
+        })();
+    </script>
+        <script>
+        (function(){
+            function typeText(el, full, speed, done){
+                if(!el) return done && done();
+                el.textContent = "";
+                var i = 0;
+                function step(){
+                    if(i <= full.length){
+                        el.textContent = full.slice(0, i);
+                        i++;
+                        setTimeout(step, speed);
+                    } else if(done) done();
+                }
+                step();
+            }
+            function prefersReduced(){
+                return typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            }
+            function run(){
+                var a = document.getElementById('hero-line-a');
+                var b = document.getElementById('hero-line-b');
+                if(!a || !b) return;
+                var textA = a.textContent;
+                var textB = b.textContent;
+                if(prefersReduced()){
+                    a.textContent = textA; b.textContent = textB; return;
+                }
+                typeText(a, textA, 18, function(){ typeText(b, textB, 22); });
+            }
+            if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', run); else run();
+        })();
+    </script>
+    </body>
+</html>
